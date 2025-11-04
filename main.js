@@ -35,7 +35,12 @@ function cellClicked(){
 }
 function updateCell(cell, index){
     options[index] = currentPlayer;
-    cell.textContent = currentPlayer;
+    if (currentPlayer == "X"){
+        cell.innerHTML = `<img class="icon" src="cross.png">`;
+    }
+    else {
+        cell.innerHTML = `<img class="icon" src="circle.png">`
+    }
 }
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
